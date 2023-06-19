@@ -1,14 +1,25 @@
+var opcoes = []
+
 function alistador() {
-  let valor = document.getElementById('valorAnalisado');
-  let v = Number(valor.value);
+  let valor = document.getElementById('valorAnalisado').value;
   let listaValores = document.getElementById('selnum');
-  let arr = [];
 
-  arr.push(v);
+  if (valor < 1 || valor > 100) {
+    alert('Numero fora do raio de valores!')
+  } else {
+    let item = document.createElement('option')
+    item.text = `${valor}`
+    listaValores.appendChild(item);
+    opcoes.push(listaValores);
+  }
+
+
+
+  
 
 
 
 
-  console.log(v, arr)
+  console.log(valor)
 
 }
